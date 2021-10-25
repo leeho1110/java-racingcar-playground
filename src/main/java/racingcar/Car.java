@@ -1,5 +1,6 @@
 package racingcar;
 
+import java.util.Random;
 import java.util.regex.Pattern;
 
 public class Car {
@@ -18,6 +19,17 @@ public class Car {
 		}
 
 		throw new IllegalArgumentException("자동차 이름은 5자 이하여야 합니다.");
+	}
+
+	public void move() {
+		if(isMoved()){
+			this.position++;
+		}
+		InputView.printCarsPostion(this.name, this.position);
+	}
+
+	private boolean isMoved() {
+		return new Random().nextInt(10) > 3;
 	}
 
 	public boolean validateNames(String userInput) {
