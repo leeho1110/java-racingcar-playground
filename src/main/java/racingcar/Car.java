@@ -14,7 +14,7 @@ public class Car {
 
 	public void initName(String name){
 		if(validateNames(name)){
-			this.name = this.name;
+			this.name = name;
 			return;
 		}
 
