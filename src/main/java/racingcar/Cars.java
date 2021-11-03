@@ -9,4 +9,16 @@ public class Cars {
 	public Cars(List<Car> carsList) {
 		this.cars = carsList;
 	}
+
+	public void move(Integer attempt) {
+		for (int i = 0; i < attempt; i++) {
+			cars.stream().forEach(car -> car.move());
+			System.out.println();
+		}
+
+	}
+
+	public List<Car> getCars() {
+		return cars;
+	}
 }
